@@ -8,16 +8,21 @@ import {
 } from "react-native";
 
 class Square extends React.Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
     return (
-      <TouchableOpacity style={styles.square}>{/* TODO */}</TouchableOpacity>
+      <TouchableOpacity style={styles.square}>
+        <Text>{this.props.value}</Text>
+      </TouchableOpacity>
     );
   }
 }
 
 class Board extends React.Component {
   renderSquare(i) {
-    return <Square />;
+    return <Square value={i} />;
   }
 
   render() {
@@ -72,18 +77,14 @@ const styles = StyleSheet.create({
     justifyContent: "center"
   },
   square: {
-    background: "#fff",
     borderWidth: 1,
-    float: "left",
-    fontSize: 24,
-    fontWeight: "bold",
-    lineHeight: 34,
-    height: 34,
+    height: 50,
     marginRight: -1,
     marginTop: -1,
     padding: 0,
-    textAlign: "center",
-    width: 34
+    width: 50,
+    justifyContent: "center",
+    alignItems: "center"
   },
   status: {
     marginBottom: 10
@@ -92,7 +93,10 @@ const styles = StyleSheet.create({
     flexDirection: "row"
   },
   game: {
-    flexDirection: "row"
+    flexDirection: "row",
+    justifyContent: "center",
+    alignContent: "center",
+    marginTop: 300
   },
   gameInfo: {
     marginLeft: 20

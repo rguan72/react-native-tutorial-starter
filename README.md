@@ -13,3 +13,5 @@ Tutorial [link](https://reactjs.org/tutorial/tutorial.html)
 3. Use `<TouchableOpacity>` instead of `<button>`
 4. Use `onPress` instead of `onClick`
 5. Use `<FlatList>` instead of `<ol>`
+6. Use `<Button>` from react-native instead of `<button>`
+7. Use `style` instead of `className`
