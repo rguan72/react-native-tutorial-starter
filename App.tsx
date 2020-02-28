@@ -8,14 +8,9 @@ import {
 } from "react-native";
 
 class Square extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     return (
-      <TouchableOpacity style={styles.square}>
-        <Text>{this.props.value}</Text>
-      </TouchableOpacity>
+      <TouchableOpacity style={styles.square}>{/* TODO */}</TouchableOpacity>
     );
   }
 }
